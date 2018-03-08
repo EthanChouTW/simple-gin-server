@@ -1,0 +1,16 @@
+version: '3'
+services:
+  studygroup:
+    build:
+      context: ./Docker
+      dockerfile: Dockerfile
+    ports:
+    - "5001:5001"
+    volumes:
+    - ./src/:/go/src/github.com/EthanChouTW/studygroup/src/
+#     networks:
+#       - xx-network
+# networks:
+#   xx-network:
+#     external:
+#       name: xx-network
